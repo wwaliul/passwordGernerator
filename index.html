@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="block">
+                <div><h1>Password Generator</h1>
+                <p>Never worry about having a weak password again!</p>
+                    <hr>
+                </div>
+                <div class="textbox">
+                    <p id="firstPassword"></p>
+                </div>   
+                <div class="block-textbox">
+                   
+
+                    <!-- <img class="copytext1" onclick="copyDivToClipboard()" src="/copy-3-svgrepo-com.svg">
+                    <div class="textbox">
+                        <p id="secondPassword"></p>
+                    </div>
+                    <img class="copytext2" onclick="copyDivToClipboard()" src="/copy-3-svgrepo-com.svg">
+                    </div> -->
+
+                    <div class="block-button" >
+                        <button id="generatePassword">New Password</button>
+                    </div>
+
+                    <div class="block-button">
+                        <button id="copyDivToClipboard">Copy to Clipboard</button>
+                    </div>
+                    
+            </div>
+            <div class="block-textbox">
+                <p>I want</p>
+                <p id="rangeValue">15</p>
+                <p>characters</p>
+                <div class="slider">
+                    <input type="range" min="1" max="30" value="15" step="1" oninput="rangeValue.innerText = this.value" onchange="generatePassword()">
+                </div>
+            </div>
+             <div class="block-textbox">
+                <div>
+                    <input type="checkbox" id="AZ" name="capAlphabet">  
+                    <label for="capAlphabet">A - Z</label>
+                </div>  
+
+                <div>
+                    <input type="checkbox" id="AtoZ" name="lowerAlphabet">  
+                    <label for="lowerAlphabet">a - z</label>
+                </div>  
+
+                <div>
+                    <input type="checkbox" id="AtoZ" name="noSpeicalCharacter">  
+                    <label for="noSpeicalCharacter">!@#$%^&*</label>
+                </div>  
+            </div>
+
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
