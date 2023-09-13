@@ -53,8 +53,11 @@ console.log(randomCharacters())
 
 
 function copyDivToClipboard(){
+    navigator.clipboard.writeText(firstPasswordEl.innerText)
     alert(firstPasswordEl.innerText + " Has been copied to clipboard")
 }
+
+console.log(copyDivToClipboard())
 
 // reset the value of the elements within the array
 
