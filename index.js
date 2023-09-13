@@ -2,7 +2,7 @@ let firstPasswordEl = document.getElementById("firstPassword")
 let secondPasswordEl = document.getElementById("secondPassword")
 let buttonEl = document.getElementById("generatePassword")
 let myRangeEl = document.getElementById("rangeValue")
-let copytextEl = document.querySelectorAll(".copytext")
+let copytextEl = document.getElementById("copyDivToClipboard")
 
 // password array to store 2 passwords. passwordLength to define the length of the string. random
 
@@ -11,12 +11,11 @@ let password = ""
 let passwordLength = ""
 let index = ""
 
-
-console.log(passwordLength)
-
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
+buttonEl.addEventListener("click", generatePassword) 
+copytextEl.addEventListener("click", copyDivToClipboard) 
 
 function randomCharacters(){
     let index = Math.floor(Math.random() * characters.length - 1) 
@@ -26,7 +25,6 @@ function randomCharacters(){
 console.log(randomCharacters())
 // when clicked on the element then run the generatePassword() function
 
-buttonEl.addEventListener("click", generatePassword) 
 
 // if password field lenth is 0 by default then run generatePassword() function
 
@@ -54,10 +52,9 @@ console.log(randomCharacters())
 }
 
 
-// function copyDivToClipboard(){
-
-//     alert(firstPasswordEl.value + "Copied to clipboard")
-// }
+function copyDivToClipboard(){
+    alert(firstPasswordEl.innerText + " Has been copied to clipboard")
+}
 
 // reset the value of the elements within the array
 
